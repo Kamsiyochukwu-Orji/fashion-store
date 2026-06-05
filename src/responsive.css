@@ -1,0 +1,515 @@
+/* ============================================================
+   DRIP FASHION STORE — RESPONSIVE MEDIA QUERIES
+   Breakpoints:
+     xl:  1280px and below  (large laptops)
+     lg:  1024px and below  (small laptops / landscape tablets)
+     md:   768px and below  (tablets / large phones)
+     sm:   480px and below  (phones)
+     xs:   360px and below  (small phones)
+   ============================================================ */
+
+
+/* ── LARGE LAPTOPS (≤ 1280px) ──────────────────────────── */
+@media (max-width: 1280px) {
+  .page {
+    padding: 2rem 1.5rem;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .hero {
+    padding: 3.5rem 2rem;
+  }
+
+  .hero-title {
+    font-size: clamp(3rem, 8vw, 5.5rem);
+  }
+}
+
+
+/* ── SMALL LAPTOPS / LANDSCAPE TABLETS (≤ 1024px) ─────── */
+@media (max-width: 1024px) {
+  /* Navbar — hide middle links */
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar {
+    padding: 0 1.25rem;
+  }
+
+  .navbar-search input {
+    width: 130px;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 3rem 1.5rem;
+    min-height: 420px;
+  }
+
+  /* Category tiles — 3 columns stays, just shorter */
+  .categories-strip {
+    height: 160px;
+  }
+
+  .cat-tile {
+    font-size: 1.6rem;
+    padding: 1rem;
+  }
+
+  /* Shop layout — narrower sidebar */
+  .shop-layout {
+    grid-template-columns: 190px 1fr;
+    gap: 1.5rem;
+  }
+
+  /* Product detail */
+  .detail-grid {
+    gap: 2rem;
+  }
+
+  .detail-title {
+    font-size: 1.8rem;
+  }
+
+  /* Cart */
+  .cart-layout {
+    grid-template-columns: 1fr 300px;
+  }
+}
+
+
+/* ── TABLETS / LARGE PHONES (≤ 768px) ──────────────────── */
+@media (max-width: 768px) {
+  /* Global */
+  .page {
+    padding: 1.5rem 1rem;
+  }
+
+  /* Navbar */
+  .navbar {
+    padding: 0 1rem;
+    height: 56px;
+    gap: 0.75rem;
+  }
+
+  .navbar-brand {
+    font-size: 26px;
+  }
+
+  .navbar-search {
+    display: none;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 2.5rem 1rem;
+    min-height: auto;
+  }
+
+  .hero-title {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+  }
+
+  .hero-sub {
+    font-size: 14px;
+  }
+
+  .hero-btns {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-btns a,
+  .hero-btns button {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Category strip → 1 row scroll */
+  .categories-strip {
+    grid-template-columns: repeat(3, 1fr);
+    height: 130px;
+  }
+
+  .cat-tile {
+    font-size: 1.3rem;
+    padding: 0.75rem;
+  }
+
+  /* Products grid */
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  /* Shop — sidebar moves to top */
+  .shop-layout {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .shop-sidebar {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .shop-sidebar h3 {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+
+  .filter-group {
+    flex: 1;
+    min-width: 140px;
+  }
+
+  /* Product detail */
+  .detail-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .detail-img-panel {
+    position: static;
+  }
+
+  .detail-img-wrap {
+    aspect-ratio: 4/3;
+    padding: 1.5rem;
+  }
+
+  .detail-title {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+
+  .detail-price {
+    font-size: 2rem;
+  }
+
+  .detail-skeleton {
+    grid-template-columns: 1fr;
+  }
+
+  .add-row {
+    flex-wrap: wrap;
+  }
+
+  .add-btn {
+    flex: 1;
+    min-width: 160px;
+  }
+
+  /* Cart */
+  .cart-layout {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .cart-summary {
+    position: static;
+  }
+
+  .cart-title {
+    font-size: 2rem;
+  }
+
+  /* Featured section */
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  /* Banner */
+  .banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+    gap: 1rem;
+  }
+
+  .banner h2 {
+    font-size: 1.5rem;
+  }
+
+  .banner .btn-primary {
+    width: 100%;
+  }
+}
+
+
+/* ── PHONES (≤ 480px) ───────────────────────────────────── */
+@media (max-width: 480px) {
+  /* Global */
+  .page {
+    padding: 1.25rem 0.875rem;
+  }
+
+  /* Navbar */
+  .navbar {
+    height: 52px;
+    padding: 0 0.875rem;
+  }
+
+  .navbar-brand {
+    font-size: 22px;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 2rem 0.875rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 12vw, 3rem);
+    line-height: 0.95;
+  }
+
+  .hero-eyebrow {
+    font-size: 10px;
+  }
+
+  /* Category strip stacks vertically */
+  .categories-strip {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .cat-tile {
+    height: 80px;
+    font-size: 1.5rem;
+  }
+
+  /* Products grid → single column */
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  /* Product cards go horizontal */
+  .pcard {
+    flex-direction: row;
+    height: 120px;
+  }
+
+  .pcard-img-wrap {
+    width: 120px;
+    min-width: 120px;
+    aspect-ratio: auto;
+    height: 100%;
+    border-radius: var(--radius) 0 0 var(--radius);
+  }
+
+  .pcard-body {
+    padding: 10px 12px;
+    justify-content: center;
+  }
+
+  .pcard-title {
+    -webkit-line-clamp: 3;
+  }
+
+  /* Shop sidebar */
+  .shop-sidebar {
+    flex-direction: column;
+  }
+
+  .filter-group {
+    min-width: unset;
+    width: 100%;
+  }
+
+  /* Product detail */
+  .detail-img-wrap {
+    padding: 1rem;
+    border-radius: 12px;
+  }
+
+  .size-options {
+    gap: 6px;
+  }
+
+  .size-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 12px;
+  }
+
+  .qty-control button {
+    width: 36px;
+    height: 44px;
+  }
+
+  .qty-control span {
+    width: 36px;
+    line-height: 44px;
+  }
+
+  .add-btn {
+    height: 44px;
+    font-size: 14px;
+  }
+
+  /* Cart */
+  .cart-item {
+    flex-direction: column;
+  }
+
+  .cart-item-img {
+    width: 100%;
+    height: 180px;
+  }
+
+  .cart-item-footer {
+    flex-wrap: wrap;
+  }
+
+  .cart-item-price {
+    margin-left: 0;
+  }
+
+  /* Breadcrumb */
+  .breadcrumb {
+    font-size: 11px;
+    gap: 4px;
+  }
+
+  /* Buttons */
+  .btn-primary,
+  .btn-outline {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  /* Section titles */
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .related-title {
+    font-size: 1.6rem;
+  }
+
+  /* Cart empty state */
+  .cart-empty {
+    padding: 2rem 1rem;
+  }
+
+  .cart-empty h2 {
+    font-size: 1.5rem;
+  }
+}
+
+
+/* ── SMALL PHONES (≤ 360px) ─────────────────────────────── */
+@media (max-width: 360px) {
+  .page {
+    padding: 1rem 0.75rem;
+  }
+
+  .navbar-brand {
+    font-size: 20px;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+    line-height: 0.95;
+  }
+
+  .section-title,
+  .related-title,
+  .cart-title {
+    font-size: 1.4rem;
+  }
+
+  .detail-title {
+    font-size: 1.2rem;
+  }
+
+  .detail-price {
+    font-size: 1.6rem;
+  }
+
+  .pcard-img-wrap {
+    width: 100px;
+    min-width: 100px;
+  }
+
+  .size-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 11px;
+  }
+
+  .color-btn {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+
+/* ── LANDSCAPE PHONES ───────────────────────────────────── */
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero {
+    padding: 1.5rem 1rem;
+    min-height: auto;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .categories-strip {
+    height: 100px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Product detail side by side in landscape */
+  .detail-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .detail-img-panel {
+    position: static;
+  }
+}
+
+
+/* ── LARGE SCREENS / TV (≥ 1440px) ─────────────────────── */
+@media (min-width: 1440px) {
+  .page {
+    max-width: 1440px;
+    padding: 2.5rem 3rem;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .hero-title {
+    font-size: 8rem;
+  }
+
+  .categories-strip {
+    height: 240px;
+  }
+
+  .cat-tile {
+    font-size: 2.5rem;
+  }
+}
